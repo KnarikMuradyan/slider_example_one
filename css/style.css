@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 50%;
+    height: 737px;
+    background: url("../img/m5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    transition: .5s;
+    margin: 0 auto;
+}
+.slider .sliderBtn {
+    padding: 0 26px 8px;
+    background: bisque;
+    font-size: 48px;
+    color: black;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.slider .sliderBtn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: bisque;
+
+}
+
+.slider .sliderBtn.prev {
+    animation: sliderPrevBtn 1.5s linear infinite;
+    margin-left: 24px;
+}
+
+.slider .sliderBtn.next {
+    animation: sliderNextBtn 1.5s linear infinite;
+    margin-right: 24px;
+}
+
+.slider .dots {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.slider .dots input {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .7);
+    box-shadow: 0 2px 5px #333;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.slider .dots input:checked {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px #fff;
+}
+
+
+@keyframes sliderPrevBtn {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-15px); }
+}
+
+
+@keyframes sliderNextBtn {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+}
